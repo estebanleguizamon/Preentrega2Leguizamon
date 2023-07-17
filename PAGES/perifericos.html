@@ -3,44 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
     <title>ELSEG - Perifericos</title>
-    <link rel="shortcut icon" href="../IMG/favblanco.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="shortcut icon" href="../images/favblanco.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 </head>
 <body>
-    <header id="header">
-        <div class="logo">
-            <!-- la idea es poner el logo, pero hay que achicarlo ./img/logo negro fondo transparente 01.png -->
-            <img src="../IMG/elsegblk.png" alt="logo" width="90" height="auto">
+    <header id="myHeader">
+        <div class="container">
+            <div class="row top">
+                <div class="col-md-4"><a href="#home" data-ancla="home" class="off">
+                    <img src="../images/elsegwht.png" alt="elsegblk" class="logo"></a></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-5">
+                    <ul class='botonera'>
+                        <li><a href="../index.html#nosotros" data-ancla="nosotros">ELSEG</a></li>
+                        <li><a href="../index.html#servicios" data-ancla="servicios">Servicios</a></li>
+                        <li><a href="#contacto" data-ancla="contacto">Contacto</a></li>
+    
+                    </ul>
+    
+                </div>
+            </div>
         </div>
-        <nav class="menu">
-            <ul class="links">
-                <li class="nav-links"><a href="../index.html">ELSEG</a></li>
-                <li class="nav-links" id="link-servicios"><a href="../PAGES/servicios.html">SERVICIOS</a></li>
-                <ul class="menu-dropdown">
-                    <li><a href="./hotel.html">Hotel</a></li>
-                    <li><a href="./tarjetas.html">Llaves</a></li>
-                    <li><a href="./cajas.html">Cajas de Seguridad</a></li>
-                    <li><a href="./ble.html">BLE</a></li>
-                    <li><a href="./economizadores.html">Ahorradores de Energia</a></li>
-                    <li><a href="./perifericos.html">Perifericos</a></li>
-                    <li><a href="./capacitaciones.html">Capacitaciones</a></li>
-                    <li><a href="./controlacceso.html">Controles de Acceso</a></li>
-                    <li><a href="./residenciales.html">Residenciales</a></li>
-                    <li><a href="./cctvyvss.html">Sistemas de Monitoreo</a></li>
-                    <li><a href="./repas.html">Reparaciones</a></li>
-                    <li><a href="./soporte.html">Soporte Tecnico</a></li>
-                </ul>
-                <li class="nav-links"><a href="../PAGES/contacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
     </header>
+    
     <section id="per">
     <h1 id="perifs">Perifericos</h1>
     </section>
     <div id="periflogo">
-        <img src="../IMG/perifericos.png" alt="equipos">
+        <img src="../images/perifericos.png" alt="equipos">
         <h2>Editores & Programadores</h2>
     <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione vero debitis molestiae fugiat nobis omnis maxime doloremque quisquam repellendus, dicta, delectus corporis atque consequatur, alias vitae quam neque illo consectetur.
@@ -57,5 +51,34 @@
         </div> 
 
    </footer>
+   
+<script
+src="https://code.jquery.com/jquery-2.2.4.min.js"
+integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script>
+  // A $( document ).ready() block.
+$(document).ready(function() {    
+$('.top a').click(function(e){
+      e.preventDefault();
+      var offset = $($(this).attr('href')).offset().top;
+      $('html, body').animate({scrollTop:offset}, 600);
+      return false;
+  });
+
+});
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  document.getElementById("myHeader").classList.add("scrolled");
+} else {
+  document.getElementById("myHeader").classList.remove("scrolled");
+}
+}
+
+  
+</script>
 </body>
 </html>

@@ -32,6 +32,18 @@ header{
 	width: 100%;
 	z-index: 34242;
 }
+#myHeader {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    z-index: 999;
+}
+#myHeader.scrolled {
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(10px);
+}	
 
 .principal{
 	background: white;
@@ -105,13 +117,16 @@ h1{
 }
 
 footer{
-	background: #A1A1A1;
+	background: rgb(2, 142, 204);
 	height: 50vh;
 	padding-top: 30px;
 }
 footer h1{
 	text-align: center;
 	font-weight: 100;
+}
+.contacto h1 {
+	color: white;
 }
 
 #home {

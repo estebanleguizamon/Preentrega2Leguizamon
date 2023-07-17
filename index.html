@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<header>
+<header id="myHeader">
 	<div class="container">
 		<div class="row top">
 			<div class="col-md-4"><a href="#home" data-ancla="home" class="off">
@@ -153,6 +153,16 @@ $('.top a').click(function(e){
     });
 
 });
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myHeader").classList.add("scrolled");
+  } else {
+    document.getElementById("myHeader").classList.remove("scrolled");
+  }
+}
+
 	
 </script>
 </body>
